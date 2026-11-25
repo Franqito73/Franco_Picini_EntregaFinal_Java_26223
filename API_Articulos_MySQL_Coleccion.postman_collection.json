@@ -1,0 +1,101 @@
+
+{
+  "info": {
+    "name": "API de Artículos",
+    "_postman_id": "abcd1234-5678-90ef-ghij-klmnopqrstuv",
+    "description": "API para administrar artículos mediante CRUD con Spring Boot y MySQL.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET - Listar todos los artículos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/articulos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "articulos"]
+        }
+      }
+    },
+    {
+      "name": "GET - Buscar artículo por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/articulos/9",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "articulos", "9"]
+        }
+      }
+    },
+    {
+      "name": "POST - Registrar nuevo producto",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Tablet Chichilo\",\n  \"precio\": 350000\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/articulos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "articulos"]
+        }
+      }
+    },
+    {
+      "name": "PUT - Modificar artículo existente",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Tablet Chichilo\",\n  \"precio\": 420000\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/articulos/9",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "articulos", "9"]
+        }
+      }
+    },
+    {
+      "name": "DELETE - Eliminar artículo",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/articulos/9",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "articulos", "9"]
+        }
+      }
+    }
+  ]
+}
